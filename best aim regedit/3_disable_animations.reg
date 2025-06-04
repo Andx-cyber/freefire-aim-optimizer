@@ -1,0 +1,14 @@
+Windows Registry Editor Version 5.00
+; Disable visual effects for better performance
+[HKEY_CURRENT_USER\Control Panel\Desktop]
+"DragFullWindows"="0"
+"FontSmoothing"="2"
+"UserPreferencesMask"=hex:90,12,01,80,10,00,00,00
+
+[HKEY_CURRENT_USER\Control Panel\Desktop\WindowMetrics]
+"MinAnimate"="0"
+"BorderWidth"="-15"
+"CaptionWidth"="-375"
+"CaptionHeight"="-375"
+"MenuWidth"="-285"
+"MenuHeight"="-285"

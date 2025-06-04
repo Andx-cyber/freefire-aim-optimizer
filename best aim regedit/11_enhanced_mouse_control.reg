@@ -1,0 +1,63 @@
+Windows Registry Editor Version 5.00
+
+; ===================================================
+; Enhanced Mouse Control for Gaming
+; Purpose: Improves mouse precision and responsiveness
+; ===================================================
+
+; Mouse Smoothing and Precision Settings
+[HKEY_CURRENT_USER\Control Panel\Mouse]
+"MouseSpeed"="0"
+"MouseThreshold1"="0"
+"MouseThreshold2"="0"
+"MouseSensitivity"="10"
+"SmoothMouseXCurve"=hex:00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00
+"SmoothMouseYCurve"=hex:00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00
+
+; Disable Windows Pointer Precision (Enhance Pointer Precision)
+[HKEY_CURRENT_USER\Control Panel\Mouse]
+"MouseSpeed"=dword:00000000
+"MouseThreshold1"=dword:00000000
+"MouseThreshold2"=dword:00000000
+
+; Optimize for gaming input
+[HKEY_CURRENT_USER\Software\Microsoft\Input\Settings]
+"MouseSensitivity"=dword:0000000a
+"MouseSpeed"=dword:00000000
+"MouseAcceleration"=dword:00000000
+
+; USB Polling Rate Optimization (for USB mice)
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Enum\HID\VID_*]
+"DeviceDesc"="HID-compliant mouse"
+"Capabilities"=dword:000000f0
+
+; Disable Windows Animations for better responsiveness
+[HKEY_CURRENT_USER\Control Panel\Desktop]
+"UserPreferencesMask"=hex:90,12,01,80,10,00,00,00
+
+; Optimize for low-latency input
+[HKEY_CURRENT_USER\Control Panel\Mouse]
+"MouseHoverTime"="400"
+"MouseTrails"="0"
+"SnapToDefaultButton"="0"
+"MouseVanish"=dword:00000000
+
+; Disable mouse acceleration in games
+[HKEY_CURRENT_USER\Software\Microsoft\DirectInput\User CID\VID_*]
+"MouseSpeed"=dword:00000000
+"MouseThreshold1"=dword:00000000
+"MouseThreshold2"=dword:00000000
+
+; Optimize for gaming performance
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile]
+"SystemResponsiveness"=dword:00000000
+"NetworkThrottlingIndex"=dword:ffffffff
+
+; Disable Windows Error Reporting for better performance
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\Windows Error Reporting]
+"Disabled"=dword:00000001
+
+; Optimize for background services (prevents stuttering)
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\PriorityControl]
+"Win32PrioritySeparation"=dword:00000026
+"ForegroundApplicationResponse"=dword:00000001

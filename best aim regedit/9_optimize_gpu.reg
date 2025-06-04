@@ -1,0 +1,10 @@
+Windows Registry Editor Version 5.00
+
+; Optimize GPU scheduling
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\GraphicsDrivers]
+"HwSchMode"=dword:00000002
+
+; Disable hardware-accelerated GPU scheduling
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\Scheduler]
+"EnablePreemption"=dword:00000000
+"EnablePreemptionPeriodic"=dword:00000000

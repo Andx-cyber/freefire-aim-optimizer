@@ -1,0 +1,7 @@
+Windows Registry Editor Version 5.00
+
+; Optimize process priority for gaming
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\PriorityControl]
+"Win32PrioritySeparation"=dword:00000026
+"ForegroundBoost"=dword:00000001
+"ForegroundFlashCount"=dword:00000000
